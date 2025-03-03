@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anims</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.5.0/css/pro.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body" id="body">
+    <div class="Vetrox">
+        <span class="VetroxDeatils" id="hometext"><span>الحركات</span></span>
+        <span class="VetroxDeatils" id="dancestext"><span>الرقصات</span></span>
+        <span class="VetroxDeatils" id="propstext"><span>الاغراض</span></span>
+        <span class="VetroxDeatils" id="sharedtext"><span>المشتركة</span></span>
+        <span class="VetroxDeatils" id="walkstext"><span>المشيات</span></span>
+        <span class="VetroxDeatils" id="scenariostext"><span>اليد</span></span>
+        <span class="VetroxDeatils" id="expressionstext"><span>الوجه</span></span>
+        <span class="VetroxDeatils" id="favoritetext"><span>المفضلة</span></span>
+        <span class="VetroxDeatils" id="settingstext" style="opacity: 0;">الازرار</span>
+        <span class="VetroxDeatils" id="exittext" style="opacity: 0;">اطفاء</span>
+    </div>
+    <div class="menu-container">
+        <i id="home" class="fa-solid fa-person sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="dances" class="fa-solid fa-child-reaching sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="props" class="fa-solid fa-box-open sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="shared" class="fas fa-people-arrows icon sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="walks" class="fas fa-walking icon sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="scenarios" class="fa-solid fa-hand-spock icon sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="expressions" class="fas fa-smile icon sidebar" style="color: rgb(223, 223, 223);"></i>
+        <i id="favorite" class="fas fa-star icon sidebar" style="color: rgb(223, 223, 223);"></i>
+        <span id="settings" class="material-icons md-18 sidebar" style="color: rgb(223, 223, 223); opacity: 0;">settings</span>
+        <span id="exit" class="material-icons md-18 sidebar" style="color: rgb(223, 223, 223); opacity: 0;">power_settings_new</span>
+    </div>
+    <div class="anims-container">
+        <nav class="navbar">
+            <div>
+                <input id="search-bar" class="search-bar" placeholder="البحث عن حركة في القسم الحالي">
+                <span class="material-icons" style="color: rgb(80, 80, 80);">search</span>
+            </div>
+            <i id="cancel" class="fa-solid fa-ban md-18 controls"></i>
+            <i id="movement" class="fa-solid fa-person-walking md-18 controls"></i>
+            <i id="loop" class="fa-solid fa-arrows-rotate md-18 controls"></i>
+        </nav>
+        <div class="info-container" style="display: none;">
+            <span id="info-title">Info</span>
+            <span id="info-desc">Display info about certain buttons and icons.</span>
+        </div>
+        <main id="anims-holder" class="anims-block">
+        </main>
+    </div>
+    <div class="settings-container">
+        <span class="settings-title">Settings</span>
+        <hr style="margin-top: 2.5%; margin-bottom: 2.5%;" width="80%">
+        <div>
+            <span>Animation Duration</span>
+            <input id="set-duration" type="number" placeholder="1500" maxlength="5" min="1000" max="15000" oninput="javascript: if (this.value >= this.max && this.value.length >= this.maxLength) this.value = this.max;">
+        </div>
+        <div>
+            <span>Cancel Animation Key</span>
+            <input id="set-cancel" type="number" placeholder="38" maxlength="3" min="0" max="360" oninput="javascript: if (this.value >= this.max && this.value.length >= this.maxLength) this.value = this.max;">
+        </div>
+        <div>
+            <span>Favorite Animation</span>
+            <input id="set-emote" type="text" placeholder="emote1">
+        </div>
+        <div>
+            <span>Favorite Animation Key</span>
+            <input id="set-key" type="number" placeholder="38" maxlength="3" min="0" max="360" oninput="javascript: if (this.value >= this.max && this.value.length >= this.maxLength) this.value = this.max;">
+        </div>
+        <hr style="margin-top: 2.5%; margin-bottom: 2.5%;" width="80%">
+        <button id="reset-duration">Reset Animation Duration</button>
+        <button id="reset-cancel">Reset Cancel Animation Key</button>
+        <button id="reset-fav">Reset Favorite Animation</button>
+        <button id="reset-key">Reset Favorite Animation Key</button>
+        <hr style="margin-top: 2.5%; margin-bottom: 2.5%;" width="80%">
+        <button id="reset-favs">Reset Favorite Anims</button>
+        <button id="save-settings" style="margin-bottom: 5%">Save Settings</button>
+    </div>
+    <script type="module" src='./js/script.js'></script>
+    <script type="module" src='./js/listeners.js'></script>
+</body>
+</html>
+
+
+<!-- // Vetrox https://discord.gg/jc3bxNTD9Y -->

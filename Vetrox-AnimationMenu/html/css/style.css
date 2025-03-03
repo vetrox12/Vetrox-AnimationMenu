@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@300&family=Vazirmatn:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+:root {
+    --Body-color: rgba(14, 2, 31, 0.842);  /*          لون الخلفية الرئيسية يفضل تخليها نفس الشفافية بس عدل على الون          */
+    --main-color: rgb(137, 70, 232);       /*     الوان البتنات او الازرار     */
+    --Hover-Color: rgb(109, 53, 189);      /*     الهوفر او اذا حط الماوس على الزر وش يتغير لي اي لون المفروض يكون اغمق من الي الون الي فوق بشوي     */
+}  
+
+* {
+    font-family: 'Vazirmatn', sans-serif;
+    cursor: default;
+}
+
+* {
+    direction: rtl;
+    text-align: right;
+}
+
+.body {
+    display: none;
+    background: var(--Body-color);
+}
+
+.material-icons.md-18 { font-size: 24px; }
+
+body {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    /*background: #c6c6c6;*/
+}
+
+.menu-container {
+    position: relative;
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 13em;
+    height: 39.3em;
+    margin-right: 1%;
+    border-radius: 0.5vh;
+    background-color: #3f464627;
+    top: 5px;
+    left: 4px;
+}
+
+.VetroxDeatils {
+    position: fixed;
+    display: block;
+    padding: 15px 30px 12px 5px;
+    padding-left: 0px;
+    background: -webkit-linear-gradient(left, #3f464600 -3%, #3f46469f 200%);
+    color: rgb(190, 190, 190);
+    font-weight: bolder; 
+    border-radius: 3px;
+    width: 129px;
+    text-indent: 31px;
+}
+
+.VetroxDeatils span {
+    left: 312px;
+}
+
+#hometext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 16rem;
+}
+
+#dancestext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 20rem;
+}
+
+#propstext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 23.9rem;
+}
+
+#sharedtext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 27.8rem;
+}
+#walkstext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 31.8rem;
+}
+
+#scenariostext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 35.7rem;
+}
+
+#expressionstext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 39.5rem;
+}
+
+#favoritetext {
+    position: absolute;
+    left: 90.5122rem;
+    border-radius: 20px;
+    top: 43.5rem;
+}
+
+#settingstext {
+    position: absolute;
+    left: 88.8rem;
+    top: 46rem;
+}
+
+#exittext {
+    position: absolute;
+    left: 88.8rem;
+    top: 50rem;
+}
+
+
+#home,
+#favorite,
+#dances,
+#scenarios,
+#walks,
+#props,
+#expressions,
+#shared,
+#settings,
+#exit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: -12px;
+    top: 15px;
+    margin-top: 10px;
+    width: 52px;
+    height: 55px;
+    border-radius: 18px;
+    font-size: 20px;
+    background-color: #3f464638;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar:hover {
+    cursor: default;
+}
+
+.anims-container {
+    position: relative;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70em;
+    height: 40em;
+    border-radius: 0.6vh;
+}
+
+.settings-container {
+    position: relative;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 25em;
+    height: 40em;
+    border-radius: 0.6vh;
+    background: rgba(0, 0, 0, 0.80);
+    color: #FFFFFF;
+}
+
+.settings-title {
+    font-size: 1.8em;
+    margin-top: 5%;
+    text-decoration: underline;
+}
+
+.settings-container div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 85%;
+    margin: 0.5%;
+}
+
+.settings-container div span {
+    font-size: 1.1em;
+}
+
+.settings-container div input {
+    width: 30%;
+    height: 100%;
+    background: none;
+    border: none;
+    border-bottom: 0.1vh solid rgb(223, 223, 223);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    -webkit-appearance: none;
+    outline: none;
+    color: #FFFFFF;
+}
+
+.settings-container div input::-webkit-outer-spin-button,
+.settings-container div input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.settings-container button {
+    background: #272a2d;
+    font-size: 1.05em;
+    width: 85%;
+    height: 6.5%;
+    border-radius: 0.4vh;
+    border: none;
+    color: rgb(223, 223, 223);
+    box-shadow: 0vh 0.1vh 0.3vh 0.1vh #14171f;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    transition: 0.2s;
+    cursor: default;
+}
+
+.settings-container button:hover {
+    background-color: #990D35;
+    box-shadow: 0vh 0.1vh 0.2vh 0.1vh #550d21;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.info-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: flex-end;
+    flex-direction: column;
+    width: 18.2em;
+    height: 4em;
+
+    margin-right: 5%;
+    top: -4.5em;
+
+    background: #000000cc;
+    border-radius: 0.6vh;
+    text-align: center;
+}
+
+.info-container span {
+    font-size: 2.2vh;
+    color: #FFFFFF;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-transform: capitalize;
+}
+
+.info-container span:last-of-type {
+    font-size: 1.8vh;
+    color: #C1C1C1;
+    text-transform: none;
+}
+
+.navbar div {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75.5%;
+    height: 3.8em;
+    background: #3f464638;
+    border-radius: 0.6vh;
+    top: 12px;
+    left: -3px;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -12px;
+    top: 11px;
+    margin-left: 0.6%;
+    width: 2.5em;
+    height: 3.5em;
+    color: rgb(223, 223, 223);
+    background-color: #3f464638;
+    border-radius: 0.6vh;
+    transition: 0.2s;
+    cursor: default;
+}
+
+.controls:hover {
+    color: var(--main-color);
+}
+
+.search-bar {
+    background: transparent;
+    border: transparent;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #dedede;
+    border-bottom: 0.15vh solid #3f4646be;
+    outline: none;
+    width: 100%;
+}
+
+.anims-block {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    overflow-y: auto;
+    margin-top: 1.5%;
+    width: 100%;
+    border-radius: 0.8vh;
+}
+
+.anims-block::-webkit-scrollbar {
+    width: 0vh;
+}
+
+.anims-block::-webkit-scrollbar-track {
+    background-color: #555;
+    border-radius: 1.6vh;
+}
+
+.anims-block::-webkit-scrollbar-thumb {
+    background: rgb(141, 141, 141);
+    border-radius: 1.6vh;
+}
+
+.anims-block::-webkit-scrollbar-thumb:hover {
+    background: #a7a7a7;
+}
+
+.anim {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24%;
+    height: 5.5em;
+    margin: 0.35%;
+    border-radius: 0.4vh;
+    background: #3f464638;
+    box-shadow: 0 0 10px #3f464600;
+    cursor: default;
+    font-weight: bolder;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.anim:hover {
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.favorite .star {
+    color: var(--main-color);;
+}
+
+.favorite:hover .star {
+    color: rgb(252, 252, 252);
+}
+
+.anim div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+    margin-left: 7.5%;
+    transform: translateX(-30px);
+    transition: transform 0.3s ease-in-out; 
+}
+ 
+.anim div span:first-of-type {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    word-break:break-all;
+}
+
+.anim div span:last-of-type {
+    color: #C1C1C1;
+    font-size: 0.855em;
+    word-break:break-all;
+    transition: 0.4s;
+}
+
+.anim:hover div span:last-of-type {
+    color: white;
+}
+
+.star {
+    color: #999999;
+    font-size: 1.8em;
+    margin-right: 10%;
+    transition: 0.3s;
+    cursor: default;
+    margin-left: 18px;
+    z-index: 1;
+}
+
+.anim:hover .star {
+    color: white;
+}
+
+.favorite {order: 1 !important;}
+.dances {order: 2;}
+.props {order: 3;}
+.scenarios {order: 3;}
+.walks {order: 4;}
+.expressions {order: 5;}
+.shared {order: 6;}
+
+.pop {
+    animation: pop 0.3s ease-in-out;
+}
+
+.fadeIn {
+    animation: fadeIn 0.2s;
+}
+
+.fadeOut {
+    animation: fadeOut 0s;
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 45.375em) {
+    .info-container {
+        max-width: 11.50em;
+        max-height: 2.725em;
+        top: -3em;
+        margin-right: 0;
+    }
+    .info-container span {
+        font-size: 0.7em;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        width: 90%;
+    }
+    .info-container span:last-of-type {
+        font-size: 0.55em;
+    }
+    .menu-container {
+        max-width: 3em;
+        max-height: 20em;
+    }
+    .anims-container {
+        max-width: 30em;
+        max-height: 20em;
+    }
+    .settings-container {
+        max-width: 14em;
+        max-height: 20em;
+    }
+    .settings-container div span {
+        font-size: 0.65em;
+    }
+    .settings-container button {
+        font-size: 0.60em;
+    }
+    .settings-title {
+        font-size: 0.8em;
+    }
+    .settings-container div input {
+        font-size: 0.7em;
+    }
+    .anim {
+        max-width: 24%;
+        max-height: 2.9em;
+    }
+    .anim div span:first-of-type {
+        font-size: 0.8em;
+    }
+
+    .anim div span:last-of-type {
+        font-size: 0.525em;
+    }
+    .navbar div {
+        max-width: 60%;
+        max-height: 2.5em;
+    }
+    .star {
+        font-size: 1.2em
+    }
+    .search-bar {
+        font-size: 0.8em;
+        max-width: 80%;
+    }
+    .controls {
+        max-width: 1.7em;
+        max-height: 1.7em;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .info-container {
+        max-width: 15em;
+        max-height: 3.5em;
+        top: -4em;
+        margin-right: 0.4em;
+    }
+    .info-container span {
+        font-size: 0.9em;
+        margin-right: 0.2em;
+        margin-left: 0.2em;
+    }
+    .info-container span:last-of-type {
+        font-size: 0.65em;
+    }
+    .menu-container {
+        max-width: 4em;
+        max-height: 25em;
+    }
+    .anims-container {
+        max-width: 40em;
+        max-height: 25em;
+    }
+    .settings-container {
+        max-width: 18em;
+        max-height: 25em;
+    }
+    .settings-container div span {
+        font-size: 0.85em;
+    }
+
+    .settings-container button {
+        font-size: 0.80em;
+    }
+    .settings-title {
+        font-size: 1.0em;
+    }
+    .settings-container div input {
+        font-size: 0.85em;
+    }
+    .anim {
+        max-width: 24%;
+        max-height: 4em;
+    }
+    .anim div span:first-of-type {
+        font-size: 1.0em;
+    }
+
+    .anim div span:last-of-type {
+        font-size: 0.655em;
+    }
+    .navbar div {
+        max-width: 100%;
+        max-height: 3.2em;
+    }
+    .star {
+        font-size: 1.4em
+    }
+    .search-bar {
+        font-size: 0.9em;
+        max-width: 80%;
+    }
+    .controls {
+        max-width: 2.2em;
+        max-height: 2.2em;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .info-container {
+        max-width: 100em;
+        max-height: 4em;
+        top: -4.5em;
+        margin-right: 1.4em;
+    }
+    .info-container span {
+        font-size: 1.1em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+    .info-container span:last-of-type {
+        font-size: 0.75em;
+    }
+    .menu-container {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .anims-container {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .settings-container {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .settings-container div span {
+        font-size: 1.1em;
+    }
+
+    .settings-container button {
+        font-size: 1.05em;
+    }
+    .settings-title {
+        font-size: 1.8em;
+    }
+    .settings-container div input {
+        font-size: 1.1em;
+    }
+    .anim {
+        min-width: 24%;
+        min-height: 5em;
+    }
+    .anim div span:first-of-type {
+        font-size: 1.3em;
+    }
+    .anim div span:last-of-type {
+        font-size: 1.055em;
+    }
+    .star {
+        font-size: 1.1em
+    }
+    .navbar div {
+        min-width: 76.7%;
+        min-height: 3.8em;
+    }
+    .controls {
+        min-width: 4.55em;
+        min-height: 3.8em;
+    }
+    .search-bar {
+        font-size: 1.1em;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 160em) {
+    .info-container {
+        min-width: 28.5em;
+        min-height: 6em;
+        top: -7em;
+        margin-right: 1.4em;
+    }
+    .info-container span {
+        font-size: 1.7em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+    .info-container span:last-of-type {
+        font-size: 1.2em;
+    }
+    .menu-container {
+        min-width: 6.5em;
+        min-height: 55em;
+    }
+    .anims-container {
+        min-width: 100em;
+        min-height: 55em;
+    }
+    .settings-container {
+        min-width: 35em;
+        min-height: 55em;
+    }
+    .settings-container div span {
+        font-size: 1.6em;
+    }
+
+    .settings-container button {
+        font-size: 1.65em;
+    }
+    .settings-title {
+        font-size: 2.1em;
+    }
+    .settings-container div input {
+        font-size: 1.6em;
+    }
+    .anim {
+        min-width: 24em;
+        min-height: 7.8em;
+    }
+    .anim div span:first-of-type {
+        font-size: 2.0em;
+    }
+    .anim div span:last-of-type {
+        font-size: 1.555em;
+    }
+    .star {
+        font-size: 3.2em
+    }
+    .navbar div {
+        min-width: 68.5%;
+        min-height: 5.8em;
+    }
+    .controls {
+        min-width: 4.0em;
+        min-height: 4.0em;
+    }
+    .search-bar {
+        font-size: 1.7em;
+        max-width: 95%;
+    }
+}
+
+/* Vetrox https://discord.gg/jc3bxNTD9Y */
